@@ -67,8 +67,7 @@ import java.awt.event.ActionListener;
                     } else{
                         this.cadastroCarros.EditConsumoAlcool.setVisible(false);
                         this.cadastroCarros.TxtConsumoAlcool.setVisible(false);
-                        
-                        
+        
                     }
                 }
                 

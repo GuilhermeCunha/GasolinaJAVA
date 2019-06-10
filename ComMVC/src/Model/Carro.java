@@ -57,4 +57,11 @@ public class Carro {
     public void setConsumoAlcool(double consumoAlcool) {
         this.consumoAlcool = consumoAlcool;
     }
+
+    @Override
+    public String toString() {
+        return this.id + " - " + this.modelo;
+    }
+    
+    
 }

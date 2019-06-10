@@ -6,9 +6,11 @@
 package commvc;
 
 import Controller.CarrosController;
+import Controller.CombustivelRentavelController;
 import Model.Carro;
 import Model.DAO.CarroDAO;
 import View.Carros.CadastroCarros;
+import View.Carros.CombustivelUsar;
 import java.util.ArrayList;
 
 /**
@@ -21,10 +23,15 @@ public class ComMVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        CombustivelUsar combustivelUsar = new CombustivelUsar();
+        combustivelUsar.setVisible(true);
+        CombustivelRentavelController combutivelRentavelController = 
+                new CombustivelRentavelController(combustivelUsar);
+        /*
         CadastroCarros cadastroCarros = new CadastroCarros();
         cadastroCarros.setVisible(true);
         CarrosController carrosController = new CarrosController(cadastroCarros);
-        
+        */
         /*
         CarroDAO carroDAO = new CarroDAO();
         Carro carro = new Carro();

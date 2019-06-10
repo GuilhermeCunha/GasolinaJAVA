@@ -6,6 +6,8 @@
 package Controller;
 
 import View.Carros.CombustivelUsar;
+import View.Carros.Menu;
+import com.sun.javafx.scene.control.GlobalMenuAdapter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,16 +29,22 @@ public class CombustivelRentavelController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String mensagem;
         if(e.getSource()== combustivelUsar.ButtonCalcularRentavel){
-        valorGasolina= Double.parseDouble(this.combustivelUsar.EditValorGasolina.getText().toString());
-        valorAlcool = Double.parseDouble(this.combustivelUsar.ValorAlcool.getText().toString());
-        System.out.println("Recebendo os dados gasolina e alcool");
-        resultadoCalculo = valorGasolina*0.7;
-        System.out.println("Calculando a rentabilidade");
-        if(resultadoCalculo<valorAlcool){
-                    mensagem = "Gasolina";
-                }else{
-                    mensagem = "Alcool";
-                }
+            valorGasolina= Double.parseDouble(this.combustivelUsar.EditValorGasolina.getText().toString());
+            valorAlcool = Double.parseDouble(this.combustivelUsar.ValorAlcool.getText().toString());
+            System.out.println("Recebendo os dados gasolina e alcool");
+            resultadoCalculo = valorGasolina*0.7;
+            System.out.println("Calculando a rentabilidade");
+            if(resultadoCalculo<valorAlcool){
+                mensagem = "Gasolina";
+            }else{
+                mensagem = "Alcool";
+            }
+            System.out.println("O combustível mais rentável é o/a " + mensagem);
+            
+            
+            Menu menu = new Menu();
+            menu.setVisible(true);
+            MenuController menuController = new MenuController(menu);
         }
     }
     

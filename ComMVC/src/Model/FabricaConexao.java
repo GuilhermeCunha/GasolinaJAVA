@@ -14,10 +14,13 @@ import java.sql.Statement;
  * @author aluno
  */
 public class FabricaConexao {
-    String servidor = "jdbc:mysql://localhost:3306/gasolina";
+    //String servidor = "jdbc:mysql://localhost:3306/gasolina";
+    //String senha = "cimatec";
     String usuario = "root";
-    String senha = "cimatec";
-    String driver = "com.mysql.jdbc.Driver";
+    //String driver = "com.mysql.jdbc.Driver";
+    String servidor = "jdbc:mysql://localhost:3306/gasolina?useTimezone=true&serverTimezone=UTC";
+    String senha = "12345678";
+    String driver = "com.mysql.cj.jdbc.Driver";
     
     public Connection conectar(){
             try {
