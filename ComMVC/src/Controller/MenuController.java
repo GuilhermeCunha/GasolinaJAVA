@@ -9,6 +9,7 @@ import View.Carros.CalculoAbastecimento;
 import View.Carros.CombustivelUsar;
 import View.Carros.Menu;
 import View.Carros.MenuGerenciarCarros;
+import View.Carros.ValorPorTrajeto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,8 +19,12 @@ import java.awt.event.ActionListener;
  */
 public class MenuController implements ActionListener{
     private Menu menu;
+    private double precoGasolina;
+    private double precoAlcool;
 
-    public MenuController(Menu menu) {
+    public MenuController(Menu menu, double precoGasolina, double precoAlcool) {
+        this.precoGasolina = precoGasolina;
+        this.precoAlcool = precoAlcool;
         this.menu = menu;
         this.menu.BotalQualCombustivel.addActionListener(this);
         this.menu.BotaoCalculoAbastecimento.addActionListener(this);
@@ -57,7 +62,9 @@ public class MenuController implements ActionListener{
         }
         
         if(ae.getSource()== this.menu.BotaoValorPorTrajeto){
-            
+            ValorPorTrajeto valorPorTrajeto = new ValorPorTrajeto();
+            valorPorTrajeto.setVisible(true);
+            ValorPorTrajetoController valorPorTrajetoController = new ValorPorTrajetoController(valorPorTrajeto, this.precoGasolina, this.precoAlcool);
         }
         if(ae.getSource()== this.menu.BotaoGerenciarCarros){
             MenuGerenciarCarros menuGerenciarCarros = new MenuGerenciarCarros();

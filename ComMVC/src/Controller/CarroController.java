@@ -22,6 +22,9 @@ public class CarroController {
     }
     
     public boolean cadastrarCarro(Carro carro){
+        System.out.println("Cadastrando o carro \n" +
+                carro.getModelo() + "\nConsumo Gasolina: " + carro.getConsumoGasolina() + 
+                "\nConsumo Alcool: " + carro.getConsumoAlcool());
         return this.carroDAO.cadastrarCarro(carro);
     }
     

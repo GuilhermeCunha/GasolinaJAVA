@@ -22,8 +22,8 @@ import java.awt.event.ActionListener;
         CarroController carroController;
         CadastroCarros cadastroCarros;
         InsercaoCombustivel insercaoCombustivel;
-        double consumoGasolina = 0;
-        double consumoAlcool = 0;
+        double consumoGasolina;
+        double consumoAlcool;
 
 
         public double getPrecoAlcool() {
@@ -75,23 +75,23 @@ import java.awt.event.ActionListener;
                     String nomeCarro = this.cadastroCarros.EditNomeCarro.getText().toString();
                     
                     boolean flex = this.cadastroCarros.CheckBoxFlex.isSelected();
-                    if(this.cadastroCarros.EditConsumoGasolina.getText().toString().equals("")){
-                        consumoGasolina = Double.parseDouble(this.cadastroCarros.EditConsumoGasolina.getText().toString());
+                    if(!this.cadastroCarros.EditConsumoGasolina.getText().toString().equals("")){
+                        this.consumoGasolina = Double.parseDouble(this.cadastroCarros.EditConsumoGasolina.getText().toString());
                     } 
                     if(!this.cadastroCarros.EditConsumoAlcool.getText().toString().equals("")){
-                        consumoAlcool = Double.parseDouble(this.cadastroCarros.EditConsumoAlcool.getText().toString());
+                        this.consumoAlcool = Double.parseDouble(this.cadastroCarros.EditConsumoAlcool.getText().toString());
                     }else{
-                        consumoAlcool = 0.0;
+                        this.consumoAlcool = 0.0;
                     }
                     Carro carro = new Carro();
                     carro.setFlex(flex);
                     carro.setModelo(nomeCarro);
                     if(flex){ 
-                    carro.setConsumoAlcool(consumoAlcool);
-                    carro.setConsumoGasolina(consumoGasolina);
+                    carro.setConsumoAlcool(this.consumoAlcool);
+                    carro.setConsumoGasolina(this.consumoGasolina);
                     }else{
                         carro.setConsumoAlcool(0);
-                        carro.setConsumoGasolina(consumoGasolina);
+                        carro.setConsumoGasolina(this.consumoGasolina);
                     }
                     this.carroController.cadastrarCarro(carro);
                     System.out.println("BOTÃO CLICADO");

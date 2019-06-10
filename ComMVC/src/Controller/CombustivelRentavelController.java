@@ -44,7 +44,7 @@ public class CombustivelRentavelController implements ActionListener {
             
             Menu menu = new Menu();
             menu.setVisible(true);
-            MenuController menuController = new MenuController(menu);
+            MenuController menuController = new MenuController(menu, valorGasolina, valorAlcool);
         }
     }
     
