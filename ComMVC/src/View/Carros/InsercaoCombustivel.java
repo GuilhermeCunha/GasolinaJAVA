@@ -29,9 +29,9 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        PrecoGasolina = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        PrecoAlcool = new javax.swing.JTextField();
         BotaoInserirCombustivel = new javax.swing.JButton();
 
         jLabel2.setText("Preço da Gasolina por Litro:");
@@ -40,17 +40,17 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
 
         jLabel1.setText("Preço da Gasolina por Litro:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        PrecoGasolina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                PrecoGasolinaActionPerformed(evt);
             }
         });
 
         jLabel3.setText("Preço do Álcool por Litro:");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        PrecoAlcool.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                PrecoAlcoolActionPerformed(evt);
             }
         });
 
@@ -68,10 +68,10 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
+                    .addComponent(PrecoGasolina)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2)
+                    .addComponent(PrecoAlcool)
                     .addComponent(BotaoInserirCombustivel, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
@@ -81,11 +81,11 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PrecoGasolina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PrecoAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(BotaoInserirCombustivel)
                 .addContainerGap(87, Short.MAX_VALUE))
@@ -94,13 +94,13 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void PrecoGasolinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrecoGasolinaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_PrecoGasolinaActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void PrecoAlcoolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrecoAlcoolActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_PrecoAlcoolActionPerformed
 
     private void BotaoInserirCombustivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInserirCombustivelActionPerformed
         // TODO add your handling code here:
@@ -143,10 +143,10 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BotaoInserirCombustivel;
+    private javax.swing.JTextField PrecoAlcool;
+    private javax.swing.JTextField PrecoGasolina;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
