@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
@@ -38,6 +39,7 @@ public class ModificarCarrosController implements ActionListener{
         this.modificarCarros.BotaoSelecionarCarro.addActionListener(this);
         this.modificarCarros.BotaoAlterarCarro.addActionListener(this);
         this.modificarCarros.CheckBoxFlexAlterar.addActionListener(this);
+        this.modificarCarros.ButtonVoltar.addActionListener(this);
         
         this.lista = this.modificarCarros.ListaCarrosParaAlterar;
         
@@ -100,6 +102,7 @@ public class ModificarCarrosController implements ActionListener{
                 this.selecionado.setConsumoGasolina(Double.parseDouble(this.txtFGasolinaCarro.getText()));
                 this.carroDAO.atualizarCarro(this.selecionado);
             }
+            JOptionPane.showMessageDialog(modificarCarros, "Carro atualizado");
             
         }
         if(ae.getSource() == this.modificarCarros.CheckBoxFlexAlterar){
@@ -111,6 +114,10 @@ public class ModificarCarrosController implements ActionListener{
                         this.modificarCarros.EditConsumoAlcoolAlterar.setVisible(false);
                         this.modificarCarros.TxtConsumoAlcoolAlterar.setVisible(false);
                     }
+        }
+        if(ae.getSource() == this.modificarCarros.ButtonVoltar){
+            modificarCarros.dispose();
+            
         }
         
     }

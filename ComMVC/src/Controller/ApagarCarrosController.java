@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -36,6 +37,7 @@ public class ApagarCarrosController implements ActionListener, ListSelectionList
         this.apagarCarros = apagarCarros;
         this.lista = this.apagarCarros.ListaCarrosParaApagar;
         this.apagarCarros.BotaoApagarCarro.addActionListener(this);
+        this.apagarCarros.ButtonVoltar.addActionListener(this);
         
         
         this.carroDAO = new CarroDAO();
@@ -77,7 +79,11 @@ public class ApagarCarrosController implements ActionListener, ListSelectionList
             if(index >= 0){ 
                 this.defaultListModel.removeElementAt(index);
             }
+            JOptionPane.showMessageDialog(apagarCarros, "Carro Apagado");
             lista.setModel(defaultListModel);
+       }
+       if(ae.getSource() == this.apagarCarros.ButtonVoltar){
+           apagarCarros.dispose();
        }
     }
 

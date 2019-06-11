@@ -24,6 +24,7 @@ public class GerenciarCarrosController implements ActionListener{
         this.menuGerenciarCarros.BotaoApagarCarros.addActionListener(this);
         this.menuGerenciarCarros.BotaoCadastrarCarros.addActionListener(this);
         this.menuGerenciarCarros.BotaoModificarCarro.addActionListener(this);
+        this.menuGerenciarCarros.buttonVoltar.addActionListener(this);
     }
     
 
@@ -45,6 +46,9 @@ public class GerenciarCarrosController implements ActionListener{
             ModificarCarros modificarCarros = new ModificarCarros();
             modificarCarros.setVisible(true);
             ModificarCarrosController modificarCarrosController = new ModificarCarrosController(modificarCarros);
+        }
+        if (ae.getSource() == this.menuGerenciarCarros.buttonVoltar ) {
+            menuGerenciarCarros.dispose();
         }
         
         

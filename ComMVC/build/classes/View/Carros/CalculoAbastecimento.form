@@ -40,14 +40,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="buttonAbastecimento" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="texto1" max="32767" attributes="0"/>
-                          <Component id="EditValorAbastecimento" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="EditLitroCombus" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="ButtonVoltar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="buttonAbastecimento" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="texto1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="EditValorAbastecimento" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="EditLitroCombus" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="105" max="32767" attributes="0"/>
               </Group>
@@ -65,7 +67,10 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="EditLitroCombus" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="buttonAbastecimento" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="buttonAbastecimento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ButtonVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace pref="135" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -95,6 +100,14 @@
         <Component class="javax.swing.JButton" name="buttonAbastecimento">
           <Properties>
             <Property name="text" type="java.lang.String" value="Calcular"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="ButtonVoltar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

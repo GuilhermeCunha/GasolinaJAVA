@@ -33,6 +33,7 @@ public class CombustivelUsar extends javax.swing.JFrame {
         ValorAlcool = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         ButtonCalcularRentavel = new javax.swing.JButton();
+        ButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,20 +43,25 @@ public class CombustivelUsar extends javax.swing.JFrame {
 
         ButtonCalcularRentavel.setText("Calcular");
 
+        ButtonVoltar.setText("Voltar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addGap(109, 109, 109)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ButtonCalcularRentavel)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel2)
                         .addComponent(jLabel1)
                         .addComponent(EditValorGasolina)
-                        .addComponent(ValorAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(125, Short.MAX_VALUE))
+                        .addComponent(ValorAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(ButtonVoltar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ButtonCalcularRentavel)))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,7 +75,9 @@ public class CombustivelUsar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ValorAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addComponent(ButtonCalcularRentavel)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonCalcularRentavel)
+                    .addComponent(ButtonVoltar))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
 
@@ -124,6 +132,7 @@ public class CombustivelUsar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton ButtonCalcularRentavel;
+    public javax.swing.JButton ButtonVoltar;
     public javax.swing.JTextField EditValorGasolina;
     public javax.swing.JTextField ValorAlcool;
     private javax.swing.JLabel jLabel1;

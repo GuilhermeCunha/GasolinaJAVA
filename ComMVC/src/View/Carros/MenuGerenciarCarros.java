@@ -31,6 +31,7 @@ public class MenuGerenciarCarros extends javax.swing.JFrame {
         BotaoCadastrarCarros = new javax.swing.JButton();
         BotaoApagarCarros = new javax.swing.JButton();
         BotaoModificarCarro = new javax.swing.JButton();
+        buttonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,16 +46,20 @@ public class MenuGerenciarCarros extends javax.swing.JFrame {
 
         BotaoModificarCarro.setText("Modificar Carro");
 
+        buttonVoltar.setText("Voltar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(78, 78, 78)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(BotaoModificarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotaoApagarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotaoCadastrarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(buttonVoltar)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(BotaoModificarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotaoApagarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotaoCadastrarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -66,7 +71,9 @@ public class MenuGerenciarCarros extends javax.swing.JFrame {
                 .addComponent(BotaoApagarCarros)
                 .addGap(18, 18, 18)
                 .addComponent(BotaoModificarCarro)
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addGap(77, 77, 77)
+                .addComponent(buttonVoltar)
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,6 +133,7 @@ public class MenuGerenciarCarros extends javax.swing.JFrame {
     public javax.swing.JButton BotaoApagarCarros;
     public javax.swing.JButton BotaoCadastrarCarros;
     public javax.swing.JButton BotaoModificarCarro;
+    public javax.swing.JButton buttonVoltar;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

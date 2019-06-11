@@ -10,6 +10,7 @@ import View.Carros.Menu;
 import com.sun.javafx.scene.control.GlobalMenuAdapter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,6 +25,7 @@ public class CombustivelRentavelController implements ActionListener {
     public CombustivelRentavelController(CombustivelUsar combustivelUsar){
         this.combustivelUsar = combustivelUsar;
         this.combustivelUsar.ButtonCalcularRentavel.addActionListener(this);
+        this.combustivelUsar.ButtonVoltar.addActionListener(this);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -40,11 +42,14 @@ public class CombustivelRentavelController implements ActionListener {
                 mensagem = "Alcool";
             }
             System.out.println("O combustível mais rentável é o/a " + mensagem);
+            JOptionPane.showMessageDialog(combustivelUsar, "O combustível mais rentável é o/a " + mensagem);
             
-            
-            Menu menu = new Menu();
-            menu.setVisible(true);
-            MenuController menuController = new MenuController(menu, valorGasolina, valorAlcool);
+            //Menu menu = new Menu();
+            //menu.setVisible(true);
+            //MenuController menuController = new MenuController(menu, valorGasolina, valorAlcool);
+        }
+        if(e.getSource()== combustivelUsar.ButtonVoltar){
+            combustivelUsar.dispose();
         }
     }
     

@@ -11,6 +11,7 @@ import View.Carros.InsercaoCombustivel;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -49,6 +50,7 @@ import java.awt.event.ActionListener;
             this.cadastroCarros.BotaoCriarCarro.addActionListener(this);
             this.cadastroCarros.CheckBoxFlex.addActionListener(this);
             this.carroController = new CarroController();
+            this.cadastroCarros.ButtonVoltar.addActionListener(this);
         }
         
         public CarrosController(InsercaoCombustivel insercaoCombustivel) {
@@ -94,7 +96,11 @@ import java.awt.event.ActionListener;
                         carro.setConsumoGasolina(this.consumoGasolina);
                     }
                     this.carroController.cadastrarCarro(carro);
+                    JOptionPane.showMessageDialog(cadastroCarros, "Carro cadastrado");
                     System.out.println("BOTÃO CLICADO");
+                }
+                if(ae.getSource()== cadastroCarros.ButtonVoltar){
+                    cadastroCarros.dispose();
                 }
             }   
             if(this.insercaoCombustivel != null){

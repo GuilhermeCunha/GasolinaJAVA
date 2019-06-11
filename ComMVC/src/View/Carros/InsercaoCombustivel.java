@@ -152,8 +152,8 @@ public class InsercaoCombustivel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BotaoInserirCombustivel;
-    private javax.swing.JTextField PrecoAlcool;
-    private javax.swing.JTextField PrecoGasolina;
+    public javax.swing.JTextField PrecoAlcool;
+    public javax.swing.JTextField PrecoGasolina;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

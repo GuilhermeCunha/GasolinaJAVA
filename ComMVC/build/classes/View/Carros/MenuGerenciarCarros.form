@@ -40,10 +40,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="BotaoModificarCarro" max="32767" attributes="0"/>
-                      <Component id="BotaoApagarCarros" max="32767" attributes="0"/>
-                      <Component id="BotaoCadastrarCarros" min="-2" pref="245" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="buttonVoltar" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="BotaoModificarCarro" max="32767" attributes="0"/>
+                          <Component id="BotaoApagarCarros" max="32767" attributes="0"/>
+                          <Component id="BotaoCadastrarCarros" min="-2" pref="245" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="77" max="32767" attributes="0"/>
               </Group>
@@ -58,7 +61,9 @@
                   <Component id="BotaoApagarCarros" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="BotaoModificarCarro" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="202" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                  <Component id="buttonVoltar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="93" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -86,6 +91,14 @@
         <Component class="javax.swing.JButton" name="BotaoModificarCarro">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar Carro"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonVoltar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

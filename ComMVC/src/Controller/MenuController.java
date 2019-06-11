@@ -21,6 +21,8 @@ public class MenuController implements ActionListener{
     private Menu menu;
     private double precoGasolina;
     private double precoAlcool;
+    CalculoAbastecimento calculoAbastecimento;
+    
 
     public MenuController(Menu menu, double precoGasolina, double precoAlcool) {
         this.precoGasolina = precoGasolina;
@@ -46,6 +48,7 @@ public class MenuController implements ActionListener{
             combustivelUsar.setVisible(true);
             CombustivelRentavelController combutivelRentavelController = 
                 new CombustivelRentavelController(combustivelUsar);
+            
         }
         if(ae.getSource()== this.menu.BotaoCalculoAbastecimento){
             CalculoAbastecimento calculoAbastecimento = new CalculoAbastecimento();
