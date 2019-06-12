@@ -43,8 +43,11 @@ public class CadastroCarros extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("Clique caso seja flex:");
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel2.setText("Selecione Caso Seja Flex:");
+
+        CheckBoxFlex.setBackground(new java.awt.Color(102, 102, 102));
         CheckBoxFlex.setText("Flex");
         CheckBoxFlex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +55,7 @@ public class CadastroCarros extends javax.swing.JFrame {
             }
         });
 
-        TxtConsumoGasolina.setText("Consumo de Gasolina em Km/l:");
+        TxtConsumoGasolina.setText("Consumo de Gasolina em Km/L:");
 
         EditConsumoGasolina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,8 +63,9 @@ public class CadastroCarros extends javax.swing.JFrame {
             }
         });
 
-        TxtConsumoAlcool.setText("Consumo de Alcool em Km/l:");
+        TxtConsumoAlcool.setText("Consumo de Alcool em Km/L:");
 
+        BotaoCriarCarro.setBackground(new java.awt.Color(255, 255, 255));
         BotaoCriarCarro.setText("Criar");
         BotaoCriarCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +81,7 @@ public class CadastroCarros extends javax.swing.JFrame {
             }
         });
 
+        ButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
         ButtonVoltar.setText("Voltar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -98,7 +103,7 @@ public class CadastroCarros extends javax.swing.JFrame {
                     .addComponent(EditConsumoGasolina, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TxtConsumoAlcool, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(EditConsumoAlcool, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,18 +128,18 @@ public class CadastroCarros extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotaoCriarCarro)
                     .addComponent(ButtonVoltar))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

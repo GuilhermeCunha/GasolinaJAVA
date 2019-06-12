@@ -7,6 +7,8 @@ package Controller;
 
 import View.Carros.CalculoAbastecimento;
 import View.Carros.CombustivelUsar;
+import View.Carros.KmInicialFinal;
+import View.Carros.KmPercorrido;
 import View.Carros.Menu;
 import View.Carros.MenuGerenciarCarros;
 import View.Carros.ValorPorTrajeto;
@@ -57,10 +59,15 @@ public class MenuController implements ActionListener{
         }
         
         if(ae.getSource()== this.menu.BotaoMediaKmInicialFinal){
-            
+            KmInicialFinal kmInicialFinal = new KmInicialFinal();
+            kmInicialFinal.setVisible(true);
+            KMInicialFinalController kmInicialFinalController = new KMInicialFinalController(kmInicialFinal);
         }
         
         if(ae.getSource()== this.menu.BotaoMediaKmsRodados){
+            KmPercorrido kmPercorrido = new KmPercorrido();
+            kmPercorrido.setVisible(true);
+            KMPercorridoController kmPercorridoController = new KMPercorridoController(kmPercorrido);
             
         }
         

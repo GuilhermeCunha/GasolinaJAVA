@@ -37,6 +37,8 @@ public class CalculoAbastecimento extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+
         jLabel1.setText("Valor do litro do combustivel");
 
         texto1.setText("Valor a ultilizar no abastecimento");
