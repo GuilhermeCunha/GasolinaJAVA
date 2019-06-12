@@ -39,6 +39,7 @@ public class ValorPorTrajeto extends javax.swing.JFrame {
         CheckBoxGasolina = new javax.swing.JCheckBox();
         CheckBoxAlcool = new javax.swing.JCheckBox();
         ToglleIdaeVolta = new javax.swing.JToggleButton();
+        ButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,6 +65,13 @@ public class ValorPorTrajeto extends javax.swing.JFrame {
 
         ToglleIdaeVolta.setText("Ida e Volta");
 
+        ButtonVoltar.setText("Voltar");
+        ButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -80,11 +88,13 @@ public class ValorPorTrajeto extends javax.swing.JFrame {
                         .addComponent(CheckBoxGasolina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                         .addComponent(CheckBoxAlcool))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(ButtonVoltar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotaoCalcularCusto)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotaoCalcularCusto)
-                    .addComponent(BotaoSelecionarCarroTrajeto))
+                .addComponent(BotaoSelecionarCarroTrajeto)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -112,7 +122,9 @@ public class ValorPorTrajeto extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(EditEnderecoDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotaoCalcularCusto)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonVoltar)
+                    .addComponent(BotaoCalcularCusto))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -133,6 +145,10 @@ public class ValorPorTrajeto extends javax.swing.JFrame {
     private void CheckBoxAlcoolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBoxAlcoolActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckBoxAlcoolActionPerformed
+
+    private void ButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVoltarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,6 +188,7 @@ public class ValorPorTrajeto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BotaoCalcularCusto;
     public javax.swing.JButton BotaoSelecionarCarroTrajeto;
+    public javax.swing.JButton ButtonVoltar;
     public javax.swing.JCheckBox CheckBoxAlcool;
     public javax.swing.JCheckBox CheckBoxGasolina;
     public javax.swing.JTextField EditEnderecoDestino;

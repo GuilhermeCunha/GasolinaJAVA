@@ -27,7 +27,8 @@ public class KMPercorridoController implements ActionListener {
     public KMPercorridoController(KmPercorrido kmPercorrido) {
             this.kmPercorrido = kmPercorrido;
             this.kmPercorrido.buttonKmPercorrido.addActionListener(this);
-            this.carroController = new CarroController();  
+            this.carroController = new CarroController();
+            this.kmPercorrido.ButtonVoltar.addActionListener(this);
         }
 
     @Override
@@ -36,7 +37,10 @@ public class KMPercorridoController implements ActionListener {
         kmPercorridos = Double.parseDouble(this.kmPercorrido.EditKmPercorridos.getText().toString());
         litrosAbastecidos = Double.parseDouble(this.kmPercorrido.EditLitrosAbastecidos.getText().toString());
         resultadoCalculo = kmPercorridos/litrosAbastecidos;
-        JOptionPane.showMessageDialog(kmPercorrido, "A média de consumo de KM's Percorridos é: "+ resultadoCalculo);
+        JOptionPane.showMessageDialog(kmPercorrido, "A média de consumo de KM's Percorridos é: "+ resultadoCalculo + " Km/L");
+        }
+        if(e.getSource()== kmPercorrido.ButtonVoltar){
+            kmPercorrido.dispose();
         }
             
         }

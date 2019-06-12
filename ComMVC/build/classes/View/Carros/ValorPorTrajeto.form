@@ -52,12 +52,14 @@
                           <Component id="CheckBoxAlcool" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane2" alignment="0" pref="210" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="ButtonVoltar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="BotaoCalcularCusto" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="BotaoCalcularCusto" min="-2" max="-2" attributes="0"/>
-                      <Component id="BotaoSelecionarCarroTrajeto" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="BotaoSelecionarCarroTrajeto" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -91,7 +93,10 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="EditEnderecoDestino" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="BotaoCalcularCusto" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ButtonVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotaoCalcularCusto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace pref="17" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -184,6 +189,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Ida e Volta"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="ButtonVoltar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonVoltarActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>

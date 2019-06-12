@@ -27,7 +27,8 @@ public class KMInicialFinalController implements ActionListener {
     public KMInicialFinalController(KmInicialFinal kmInicialFinal) {
             this.kmInicialFinal = kmInicialFinal;
             this.kmInicialFinal.buttonKmInicialFinal.addActionListener(this);
-            this.carroController = new CarroController();  
+            this.carroController = new CarroController();
+            this.kmInicialFinal.ButtonVoltar.addActionListener(this);
         }
 
     @Override
@@ -37,7 +38,10 @@ public class KMInicialFinalController implements ActionListener {
         kmFinal = Double.parseDouble(this.kmInicialFinal.EditKmFinal.getText().toString());
         litrosAbastecidos = Double.parseDouble(this.kmInicialFinal.EditLitrosAbastecidos.getText().toString());
         resultadoCalculo = (kmFinal - kmInicio)/ litrosAbastecidos;
-        JOptionPane.showMessageDialog(kmInicialFinal, "A média de consumo de KM Inicial / KM Final é: "+ resultadoCalculo);
+        JOptionPane.showMessageDialog(kmInicialFinal, "A média de consumo de KM Inicial / KM Final é: "+ resultadoCalculo + " Km/L");
+        }
+        if(e.getSource()== kmInicialFinal.ButtonVoltar){
+            kmInicialFinal.dispose();
         }
         
             

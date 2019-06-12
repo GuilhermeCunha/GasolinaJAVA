@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -44,6 +45,7 @@ public class ValorPorTrajetoController implements ActionListener, ListSelectionL
         this.valorPorTrajeto.BotaoSelecionarCarroTrajeto.addActionListener(this);
         this.valorPorTrajeto.CheckBoxAlcool.addActionListener(this);
         this.valorPorTrajeto.CheckBoxGasolina.addActionListener(this);
+        this.valorPorTrajeto.ButtonVoltar.addActionListener(this);
         
         
         this.carroDAO = new CarroDAO();
@@ -123,14 +125,19 @@ public class ValorPorTrajetoController implements ActionListener, ListSelectionL
             
             if(this.valorPorTrajeto.CheckBoxGasolina.isSelected()){
                 System.out.println("Custo : " + ((distancia/this.selecionado.getConsumoGasolina())* this.precoGasolina));
+                JOptionPane.showMessageDialog(valorPorTrajeto, "Custo : " + ((distancia/this.selecionado.getConsumoGasolina())* this.precoGasolina));
             }else{
                 System.out.println("Custo : " + ((distancia/this.selecionado.getConsumoAlcool())* this.precoAlcool));
-          
+                JOptionPane.showMessageDialog(valorPorTrajeto, "Custo : " + ((distancia/this.selecionado.getConsumoAlcool())* this.precoAlcool) );
             }
+            
        
             
 
         }
+        if(ae.getSource()== valorPorTrajeto.ButtonVoltar){
+                valorPorTrajeto.dispose();
+            }
       
     }
 
