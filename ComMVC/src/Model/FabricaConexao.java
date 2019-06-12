@@ -17,10 +17,12 @@ public class FabricaConexao {
     //String servidor = "jdbc:mysql://localhost:3306/gasolina?autoReconnect=true&useSSL=false";
     //String senha = "cimatec";
     String usuario = "root";
-    String driver = "com.mysql.jdbc.Driver";
+    //String driver = "com.mysql.jdbc.Driver";
     String servidor = "jdbc:mysql://localhost:3306/gasolina?useTimezone=true&serverTimezone=UTC";
-    String senha = "g159263g";
-    //String driver = "com.mysql.cj.jdbc.Driver";
+    //String senha = "g159263g";
+    
+    String senha = "12345678";
+    String driver = "com.mysql.cj.jdbc.Driver";
     
     public Connection conectar(){
             try {
